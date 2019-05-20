@@ -1,0 +1,56 @@
+*/
+
+html{
+    font-family: sans-serif; ;
+}
+
+*{
+    margin:0px;
+    padding:0px;
+    
+}
+
+li{
+    list-style:none;
+}
+
+
+
+body{
+    width: 70%;
+    margin: auto;
+    height: 500px;
+}
+
+main{
+    min-height: 500px;
+}
+
+header, footer{
+height:20px;
+width:100%;
+background-color: lightseagreen;
+text-align: center;
+line-height: 100%;
+padding: 10px 20px;
+color: white;
+}
+
+header a{
+    text-decoration:none;
+    color:azure;
+}
+#logo{
+    display: inline-block;
+}
+
+
+nav{
+    text-align: center;
+    margin:5px 0px;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+}
