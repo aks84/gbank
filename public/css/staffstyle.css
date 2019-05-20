@@ -54,3 +54,23 @@ nav{
 nav ul li a{
     text-decoration: none;
 }
+
+.actions {
+    margin: 15px 0px;
+}
+
+table{
+    margin-top: 20px;
+}
+th{
+    background-color: #8fe1dc;
+    border:1px solid #8fe1dc;
+}
+tr, th, td{
+    padding: 10px;
+    text-align: left;
+
+}
+td{
+    border:1px solid lightgray;
+}

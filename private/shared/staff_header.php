@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title> Globe Bank - <?php echo $staff_title; ?></title>
+        <link rel="stylesheet" href="<?php echo url_for("/css/reset.css"); ?>"/>
         <link rel="stylesheet" href="<?php echo url_for("/css/staffstyle.css"); ?>"/>
     </head>
     <body>
