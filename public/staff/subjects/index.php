@@ -21,7 +21,7 @@ $subjects = [
 
 <main>
 	<div class="subjects_listing">
-		<h1> Subjects</h1>
+		<h1> Manage Subjects</h1>
 		<div class="actions">
 			<a href="" class="action">
 				Create New Subject
@@ -46,10 +46,10 @@ $subjects = [
 			<?php foreach ($subjects as $subject) { ?>
 				
 				<tr>
-					<td><?php echo $subject['id'];?></td>
-					<td><?php echo $subject['position'];?></td>
+					<td><?php echo h($subject['id']);?></td>
+					<td><?php echo h($subject['position']);?></td>
 					<td><?php echo $subject['visible'];?></td>
-					<td><?php echo $subject['menu_name'];?></td>
+					<td><?php echo h($subject['menu_name']);?></td>
 					<td><a class="action" href="<?php echo url_for('/staff/subjects/show.php?id='.$subject['id']); ?>">View</a></td>
 					<td><a class="action" href="">Edit</a></td>
 					<td><a class="action" href="">Delete</a></td>
