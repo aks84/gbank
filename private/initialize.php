@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 //global project path constants
 define("PRIVATE_PATH", dirname(__FILE__));

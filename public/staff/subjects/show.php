@@ -1,6 +1,6 @@
 <?php require_once('../../../private/initialize.php'); ?>
 
-
+<?php $staff_title = "Show Subject" ?>
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
 <main>
@@ -10,7 +10,7 @@
 	</div>
 
 	<h2><?php $id = $_GET['id'] ?? '1'; ?>
-		<?php echo $id ?>
+		<?php echo h($id )?>
 	</h2>
 
 </main>

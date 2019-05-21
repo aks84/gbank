@@ -1,8 +1,10 @@
 <?php require_once('../../../private/initialize.php'); ?>
 
+<?php $staff_title = "Manage Pages" ?>
+
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
-<?php $staff_title = "Manage Pages" ?>
+
 
 <?php 
 
@@ -53,7 +55,7 @@ $pages = [
 					<td><?php echo h($page['position']);?></td>
 					<td><?php echo $page['visible'] = 1 ? 'true' : 'false';?></td>
 					<td><?php echo h($page['menu_name']);?></td>
-					<td><a class="action" href="<?php echo url_for('/staff/pages/show.php?id='.$page['id']); ?>">View</a></td>
+					<td><a class="action" href="<?php echo url_for('/staff/pages/show.php?id='. h(u($page['id']))); ?>">View</a></td>
 					<td><a class="action" href="">Edit</a></td>
 					<td><a class="action" href="">Delete</a></td>
 				</tr>

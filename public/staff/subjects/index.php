@@ -1,4 +1,6 @@
 <?php require_once('../../../private/initialize.php'); ?>
+<?php $staff_title = "Subject" ?>
+<?php include(SHARED_PATH . '/staff_header.php'); ?>
 
 <?php 
 
@@ -15,9 +17,9 @@ $subjects = [
 
 ?>
 
-<?php $staff_title = "Subjects" ?>
 
-<?php include(SHARED_PATH . '/staff_header.php'); ?>
+
+
 
 <main>
 	<div class="subjects_listing">
@@ -50,7 +52,7 @@ $subjects = [
 					<td><?php echo h($subject['position']);?></td>
 					<td><?php echo $subject['visible'];?></td>
 					<td><?php echo h($subject['menu_name']);?></td>
-					<td><a class="action" href="<?php echo url_for('/staff/subjects/show.php?id='.$subject['id']); ?>">View</a></td>
+					<td><a class="action" href="<?php echo url_for('/staff/subjects/show.php?id='.h(u($subject['id']))); ?>">View</a></td>
 					<td><a class="action" href="">Edit</a></td>
 					<td><a class="action" href="">Delete</a></td>
 				</tr>
