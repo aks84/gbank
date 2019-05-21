@@ -4,31 +4,12 @@
 
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
+<main>
 
-
-<?php 
-
-$pages = [
-
-	['id' => '4', 'position' => '2', 'visible' => '1', 'menu_name' => 'GBI Home'],
-	['id' => '5', 'position' => '3', 'visible' => '1', 'menu_name' => 'Contact'],
-	['id' => '6', 'position' => '4', 'visible' => '1', 'menu_name' => 'About us'],
-	['id' => '7', 'position' => '5', 'visible' => '1', 'menu_name' => 'Clients'],
-
-]; 
-
-
-
-?>
-
-
-
-        <main>
-
-        	<div class="subjects_listing">
+	<div class="subjects_listing">
 		<h1> Manage Pages </h1>
 		<div class="actions">
-			<a href="" class="action">
+			<a href="new.php" class="action">
 				Create New Page
 			</a>
 		</div>
@@ -47,9 +28,10 @@ $pages = [
 		</thead>
 
 		<tbody>
+			<?php 
+			$pages = $db->query("select * from pages");
+			while ($page = $pages->fetch_assoc()) { ?>
 
-			<?php foreach ($pages as $page) { ?>
-				
 				<tr>
 					<td><?php echo h($page['id']);?></td>
 					<td><?php echo h($page['position']);?></td>
@@ -63,12 +45,12 @@ $pages = [
 		</tbody>
 	</table>
 
-            
-            
-            
-            
-        </main>
-        
-        
-        
+
+
+
+
+</main>
+
+
+
 <?php include(SHARED_PATH . "/staff_footer.php"); 

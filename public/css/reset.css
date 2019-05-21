@@ -23,6 +23,12 @@ table {
 	border-spacing: 0;
 }
 
+label, input,select{
+	display: block;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
 body a{
 	text-decoration: none;
 }
