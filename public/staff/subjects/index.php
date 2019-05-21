@@ -2,25 +2,6 @@
 <?php $staff_title = "Subject" ?>
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
-<?php 
-
-$subjects = [
-
-	['id' => '1', 'position' => '1', 'visible' => '1', 'menu_name' => 'About Global Bank'],
-	['id' => '2', 'position' => '2', 'visible' => '1', 'menu_name' => 'Consumer'],
-	['id' => '3', 'position' => '3', 'visible' => '1', 'menu_name' => 'Small Business'],
-	['id' => '4', 'position' => '4', 'visible' => '1', 'menu_name' => 'Commercial'],
-
-]; 
-
-
-
-?>
-
-
-
-
-
 <main>
 	<div class="subjects_listing">
 		<h1> Manage Subjects</h1>
@@ -45,13 +26,15 @@ $subjects = [
 
 		<tbody>
 
-			<?php foreach ($subjects as $subject) { ?>
-				
+			<?php 
+			$subjects = $db->query("select * from subjects");
+			while ($subject = $subjects->fetch_assoc()) { ?>
+
 				<tr>
 					<td><?php echo h($subject['id']);?></td>
 					<td><?php echo h($subject['position']);?></td>
 					<td><?php echo $subject['visible'];?></td>
-					<td><?php echo h($subject['menu_name']);?></td>
+					<td><?php echo h($subject['title']);?></td>
 					<td><a class="action" href="<?php echo url_for('/staff/subjects/show.php?id='.h(u($subject['id']))); ?>">View</a></td>
 					<td><a class="action" href="">Edit</a></td>
 					<td><a class="action" href="">Delete</a></td>

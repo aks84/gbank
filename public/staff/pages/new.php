@@ -7,30 +7,47 @@
 <main>
 
 	<form action="" method="POST">
-		<label for="name">Position</label>
-		<input type="number" name="position" required="">
-		<label for="name">Visible</label>
-		<select name="visible" id="">
-			<option value="Yes">Yes</option>
-			<option value="No">No</option>
+
+		<label for="title">Page Title</label>
+		<input type="text" name="title" required="">
+
+		<label for="subject_id">Subjects</label>
+		<select name="subject_id" id="">
+			<?php $titles = $db->query("SELECT * FROM subjects"); 
+			while ($title = $titles->fetch_assoc()) {?>
+				<option name="subject_id" value="<?php echo $title['id']; ?>">
+					<?php echo $title['title']; ?>
+				</option>
+			<?php } ?>
 		</select>
-		<label for="menu_title">Page Title</label>
-		<input type="text" name="menu_title" required="">
+		<label for="name">Visible</label>
+
+		<select name="visible" id="">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</select>
+
+		<label for="name">Position</label>
+		<input type="text" name="position" required="">
+
 		<input type="submit" name="create_page" value="Create">
+
 	</form>
 	<?php  
 
 	if (isset($_POST["create_page"])) {
 		$position = $_POST['position'];
 		$visible = $_POST['visible'];
-		$page_title = $_POST['menu_title'];
+		$title = $_POST['title'];
+		$subject_id = $_POST['subject_id'];
 
-		$db->query("INSERT INTO pages (position, visible, title) VALUES($position, $visible, $page_title)");
-	}
+		$inserted = $db->query("INSERT INTO pages (position, visible, title, subject_id) VALUES('$position', '$visible', '$title', '$subject_id')");
+
+	
+}
 
 
-
-	?>
+?>
 </main>
 
 

@@ -11,8 +11,8 @@
 		<input type="number" name="position" id="">
 		<label for="visible">Visible</label>
 		<select name="visible" id="">
-			<option value="Yes">Yes</option>
-			<option value="No">No</option>
+			<option value="1">Yes</option>
+			<option value="0">No</option>
 		</select>
 		<label for="menu_title">Subject Title</label>
 		<input type="text" name="menu_title" required="">
@@ -27,7 +27,7 @@
 		$visible = $_POST['visible'];
 		$subject_title = $_POST['menu_title'];
 
-		$db->query("INSERT INTO pages (position, visible, title) VALUES($position, $visible, $subject_title)");
+		$db->query("INSERT INTO subjects (position, visible, title) VALUES('$position', '$visible', '$subject_title')");
 	}
 
  ?>

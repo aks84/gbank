@@ -20,6 +20,7 @@
 				<th>ID</th>
 				<th>Position</th>
 				<th>Visible</th>
+				<th>Subject</th>
 				<th>Menu Title</th>
 				<th>&nbsp;</th>
 				<th>&nbsp;</th>
@@ -36,21 +37,22 @@
 					<td><?php echo h($page['id']);?></td>
 					<td><?php echo h($page['position']);?></td>
 					<td><?php echo $page['visible'] = 1 ? 'true' : 'false';?></td>
-					<td><?php echo h($page['menu_name']);?></td>
+					<td><?php echo $page['subject_id']; ?></td>
+					<td><?php echo h($page['title']);?></td>
 					<td><a class="action" href="<?php echo url_for('/staff/pages/show.php?id='. h(u($page['id']))); ?>">View</a></td>
 					<td><a class="action" href="">Edit</a></td>
 					<td><a class="action" href="">Delete</a></td>
-				</tr>
-			<?php } ?>
-		</tbody>
-	</table>
+					</tr>
+				<?php } ?>
+			</tbody>
+		</table>
 
 
 
 
 
-</main>
+	</main>
 
 
 
-<?php include(SHARED_PATH . "/staff_footer.php"); 
+	<?php include(SHARED_PATH . "/staff_footer.php"); 
