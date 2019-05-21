@@ -25,7 +25,7 @@ $subjects = [
 	<div class="subjects_listing">
 		<h1> Manage Subjects</h1>
 		<div class="actions">
-			<a href="" class="action">
+			<a href="new.php" class="action">
 				Create New Subject
 			</a>
 		</div>

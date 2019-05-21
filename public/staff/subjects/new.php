@@ -7,31 +7,30 @@
 <main>
 
 	<form action="" method="POST">
-		<label for="name">Position</label>
-		<input type="number" name="position" required="">
-		<label for="name">Visible</label>
+		<label for="position">Position</label>
+		<input type="number" name="position" id="">
+		<label for="visible">Visible</label>
 		<select name="visible" id="">
 			<option value="Yes">Yes</option>
 			<option value="No">No</option>
 		</select>
-		<label for="menu_title">Page Title</label>
+		<label for="menu_title">Subject Title</label>
 		<input type="text" name="menu_title" required="">
-		<input type="submit" name="create_page" value="Create">
+		<input type="submit" name="create_subject" value="Create">
 	</form>
-	<?php  
 
-	if (isset($_POST["create_page"])) {
+</main>
+
+<?php 
+	if (isset($_POST["create_subject"])) {
 		$position = $_POST['position'];
 		$visible = $_POST['visible'];
-		$page_title = $_POST['menu_title'];
+		$subject_title = $_POST['menu_title'];
 
-		$db->query("INSERT INTO pages (position, visible, title) VALUES($position, $visible, $page_title)");
+		$db->query("INSERT INTO pages (position, visible, title) VALUES($position, $visible, $subject_title)");
 	}
 
-
-
-	?>
-</main>
+ ?>
 
 
 
