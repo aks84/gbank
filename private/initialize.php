@@ -1,7 +1,7 @@
 <?php
 ob_start();
 
-require_once('connection.php');
+
 //global project path constants
 define("PRIVATE_PATH", dirname(__FILE__));
 define("PROJECT_PATH", dirname(PRIVATE_PATH));
@@ -15,6 +15,9 @@ define("WWW_ROOT", $doc_root );
 
 
 require_once('functions.php');
+
+
+require_once('connection.php');
 
 
 

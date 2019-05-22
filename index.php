@@ -1,3 +1,5 @@
+<?php require_once('private/initialize.php'); ?>
+
 <!DOCTYPE html>
 
 <html>
@@ -11,7 +13,7 @@
         </header>
         <nav>
             <nu>
-                <li><a href="index.php">Menu</a></li>
+                <li><a href="public/staff/">Staff</a></li>
                 
             </nu>
 

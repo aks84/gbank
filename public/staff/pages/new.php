@@ -5,6 +5,9 @@
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
 <main>
+	<div class="newEntry">
+		<h2>Create Page</h2>
+	</div>
 
 	<form action="" method="POST">
 

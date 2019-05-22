@@ -78,3 +78,24 @@ td{
 lable, input{
     display: block;
 }
+
+
+.single_subject,
+.single_page{
+    margin-top: 10px;
+}
+
+
+dl{
+    padding: 10px;
+}
+
+dt{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+dd{
+    margin-top: 3px;
+    margin-left: 4px;
+}
